@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Project Blocky</title>
     <link rel="stylesheet" type="text/css" href="materialize/css/materialize.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 </head>
 
 <body class="blue-grey darken-3">
@@ -52,7 +53,7 @@
                     <span class="card-title"><h3>The Beginning and End...</h3></span>
                     <p>Go ahead... click one... you know you want to.</p>
                     <a class="waves-effect waves-light btn" onclick="makeToast()">Start Server</a>
-                    <a class="waves-effect waves-light btn">Stop Server</a>
+                    <a class="waves-effect waves-light btn" onclick="makeToast()">Stop Server</a>
                 </div>
             </div>
 
@@ -60,7 +61,7 @@
                 <div class="card-content white-text">
                     <span class="card-title"><h3>Good ol' Backups</h3></span>
                     <p>Always need a good backup plan. Never know when something will go wrong...</p>
-                    <a class="waves-effect waves-light btn">Run a Backup</a>
+                    <a class="waves-effect waves-light btn" onclick="makeToast()">Run a Backup</a>
                 </div>
             </div>
 
@@ -75,7 +76,7 @@
 <script type="application/javascript">
 
     function makeToast() {
-        Materialize.toast('Yes sir!', 4000);
+        Materialize.toast('This does not work yet :(', 5000);
     }
 
 
