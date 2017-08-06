@@ -1,6 +1,6 @@
 # MineCraft Control Panel
 
-Herein lies the heart and of Wes and Arden... and friends.
+Herein lies the heart and soul of Wes and Arden... and friends.
 
 ## Project Goal
 
