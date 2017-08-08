@@ -14,7 +14,7 @@
 
 <script>
   console.log("We are in the setup");
-  var socket =  io();
+  var socket =  io("192.168.1.105:8080");
   socket.on("connected", connectedToServer());
 </script>
 

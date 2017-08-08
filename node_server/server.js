@@ -22,11 +22,12 @@ var io   = require('socket.io');
 var util = require('util');
 var exec = require('child_process').exec;
 
-//include the moduels for our server functions
+//include the modules for our server functions
 var command = require('./consoleCommands');
 
 //define how arguments are used in the terminal
-var puts = function(error, stdout, stderr){
+var puts = function (error, stdout, stderr) {
+    'use strict';
     util.print(stdout);
 };
 
