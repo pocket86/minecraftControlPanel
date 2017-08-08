@@ -1,4 +1,4 @@
-\<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -6,7 +6,7 @@
     <title>Project Blocky</title>
     <link rel="stylesheet" type="text/css" href="materialize/css/materialize.min.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="node_server/node_modules/socket.io-client/dist/socket.io.js"></script>
+    <script src="node_modules/socket.io-client/dist/socket.io.js"></script>
     <script src="index.js"></script>
 </head>
 
@@ -14,7 +14,7 @@
 
 <script>
   console.log("We are in the setup");
-  var socket =  io.connect();
+  var socket =  io();
   socket.on("connected", connectedToServer());
 </script>
 
