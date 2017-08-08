@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+\<!DOCTYPE html>
 <html>
 
 <head>
@@ -6,9 +6,18 @@
     <title>Project Blocky</title>
     <link rel="stylesheet" type="text/css" href="materialize/css/materialize.min.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="node_server/node_modules/socket.io-client/dist/socket.io.js"></script>
+    <script src="index.js"></script>
 </head>
 
 <body class="blue-grey darken-3">
+
+<script>
+  console.log("We are in the setup");
+  var socket =  io.connect();
+  socket.on("connected", connectedToServer());
+</script>
+
 
     <nav class="nav-extended">
 
@@ -72,12 +81,9 @@
 
 </html>
 <script src="materialize/js/materialize.min.js"></script>
-<script src="mcNode.js"></script>
 <script type="application/javascript">
 
     function makeToast() {
         Materialize.toast('This does not work yet :(', 5000, 'rounded');
     }
-
-
 </script>

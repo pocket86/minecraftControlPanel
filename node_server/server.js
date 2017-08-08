@@ -33,9 +33,8 @@ var puts = function(error, stdout, stderr){
 //create the server and start listening on the defined port
 const PORT = 8080;
 var server = http.createServer();
-server.listen(PORT);
+server.listen(process.env.PORT || PORT);
 console.log("Listening for a connection...");
-
 //recieves the connection from the client and passes in a socket
 io.listen(server).on('connection', function(socket){
 
