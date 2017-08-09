@@ -14,10 +14,9 @@
 
 <script>
   console.log("We are in the setup");
-  var socket =  io("192.168.1.105:8080");
+  var socket =  io('http://localhost:8080');
   socket.on("connected", connectedToServer());
 </script>
-
 
     <nav class="nav-extended">
 
