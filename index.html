@@ -14,8 +14,10 @@
 
 <script>
   console.log("We are in the setup");
-  var socket =  io('http://localhost:8080');
-  socket.on("connected", connectedToServer());
+  var socket =  io.connect("//64.52.84.42:8080");
+  socket.on("connected", function(){
+      console.log("Connection was made!");
+      });
 </script>
 
     <nav class="nav-extended">
