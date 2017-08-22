@@ -43,9 +43,18 @@ io.listen(server).on('connection', function(socket){
     console.log("The server and client are connected");
     socket.emit("connected");
 
+// this line starts the server. Let's build this out into the functions below    exec("/opt/mcScripts/startServer.sh", puts);
+
+    console.log("Starting the server...");
     //listen for what method to call
-   // socket.on("stopServer",  command.stopServer());
-   // socket.on("startServer", command.startServer());
-   // socket.on("runBabkup",   command.runBabkup());
-   // socket.on("renderMap",   command.renderMap());
+    socket.on("startServer", ()=>{
+        //call the tmux script to start the server
+        exec("/opt/mcScripts/startServer.sh", puts);	//TODO error handel to prevent multiple instances of the server starting
+    });
+    socket.on("stopServer", ()=>{
+        exec("killall -9 tmux", puts);
+	//exec("killall -9 java", puts);    this should only be needed if the server is started using java rather then tmux
+    });
+//    socket.on("runBabkup",   command.runBabkup());
+//    socket.on("renderMap",   command.renderMap());
 });
